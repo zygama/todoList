@@ -1,0 +1,44 @@
+span {
+  width: 100%;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  margin: 0 auto; /* margin: top/bot left/right */
+  width: 25%;
+  border: 1px solid black;
+}
+
+#list_header {
+  background-color: blue;
+  color: white;
+}
+
+#input_todo {
+  width: 100%;
+  text-indent: 10%;
+}
+
+#input_todo.hide {
+  display: none;
+}
+
+.todo {
+  background-color: gray;
+  padding-left: 10%;
+}
+
+.todo:nth-child(odd) { /* to only affect odd of class todo inside ul */
+  background-color: white;
+}
+
+.did_todo {
+  color: gray;
+  text-decoration: line-through;
+}
