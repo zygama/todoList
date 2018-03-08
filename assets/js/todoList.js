@@ -24,7 +24,7 @@ function initListeners() {
   });
 
   // Delete todo when the delete button of this todo is clicked
-  $('ul').on('click', 'span.delete_item_button', function() {
+  $('ul').on('click', 'span', function() {
     // Note: Have to listen to an existing parent first and check if element clicked is 'span.delete_item_button'
     $(this).parent().fadeOut(400, function() {
       $(this).remove();
@@ -44,11 +44,11 @@ function initListeners() {
 
   // Toggle class 'delete_item_button' when the mouse over a ToDo
   $('ul').on('mouseenter', 'li', function() {
-    console.log('over');
+    console.log('x appear');
     $(this).children('span').removeClass('delete_item_button');
   });
-  $('ul').on('mouseout', 'li', function() {
-    console.log('over');
+  $('ul').on('mouseleave', 'li', function() {
+    console.log('x disapear');
     $(this).children('span').addClass('delete_item_button');
   });
 }
