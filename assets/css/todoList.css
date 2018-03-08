@@ -1,10 +1,5 @@
 body {
-  background-color: black;
-}
-
-span {
-  width: 100%;
-  display: block;
+  background-color: purple;
 }
 
 ul {
@@ -36,7 +31,7 @@ ul {
 
 .todo {
   background-color: white;
-  padding-left: 10%;
+  /* padding-left: 10%; */
 }
 
 .todo:nth-child(odd) { /* to only affect odd of class todo inside ul */
@@ -46,4 +41,8 @@ ul {
 .did_todo {
   color: gray;
   text-decoration: line-through;
+}
+
+.delete_item_button {
+  /* display: none; */
 }
