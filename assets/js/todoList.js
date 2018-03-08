@@ -41,6 +41,16 @@ function initListeners() {
       $(this).val(''); // Clear the input when todo is added
     }
   });
+
+  // Toggle class 'delete_item_button' when the mouse over a ToDo
+  $('ul').on('mouseenter', 'li', function() {
+    console.log('over');
+    $(this).children('span').removeClass('delete_item_button');
+  });
+  $('ul').on('mouseout', 'li', function() {
+    console.log('over');
+    $(this).children('span').addClass('delete_item_button');
+  });
 }
 
 initListeners();
