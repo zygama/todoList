@@ -44,11 +44,9 @@ function initListeners() {
 
   // Toggle class 'delete_item_button' when the mouse over a ToDo
   $('ul').on('mouseenter', 'li', function() {
-    console.log('x appear');
     $(this).children('span').removeClass('delete_item_button');
   });
   $('ul').on('mouseleave', 'li', function() {
-    console.log('x disapear');
     $(this).children('span').addClass('delete_item_button');
   });
 }

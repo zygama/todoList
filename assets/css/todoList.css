@@ -1,5 +1,6 @@
 body {
   background-color: purple;
+  font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -10,33 +11,55 @@ ul {
 
 #container {
   margin: 100px auto; /* margin: top/bot left/right */
-  width: 25%;
+  width: 360px;
   border: 1px solid black;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  background: #f7f7f7;
 }
 
 #list_header {
-  background-color: blue;
+  background-color: #2980b9;
   color: white;
   margin: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: normal;
 }
 
 #input_todo {
+  color: #2980b9;
   width: 100%;
-  text-indent: 10%;
+  font-size: 18px;
+  background: #f7f7f7;
+  padding: 13px 13px 13px 20px;
+  box-sizing: border-box; /* with this the 100% of width count padding and border, so input doesn't overflow container anymore */
+}
+
+#input_todo:focus {
+  background: white;
+  border: 3px solid #2980b9;
+  outline: none;
 }
 
 #input_todo.hide {
   display: none;
 }
 
-.todo {
-  background-color: white;
+#add_todo_icon {
+  float: right;
+}
 
+.todo {
+  background-color: #f7f7f7;
+  height: 40px;
+  line-height: 40px; /* In this whay the text will be centered horizontaly */
+  color: #666;
   /* padding-left: 10%; */
 }
 
 .todo:nth-child(odd) { /* to only affect odd of class todo inside ul */
-  background-color: gray;
+  background-color: white;
 }
 
 .did_todo {
