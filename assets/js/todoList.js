@@ -49,6 +49,10 @@ function initListeners() {
   $('ul').on('mouseleave', 'li', function() {
     $(this).children('span').addClass('delete_item_button');
   });
+
+  $('body').on('click', '#hide_input', function() {
+    inputTodos.fadeToggle('hide');
+  });
 }
 
 initListeners();
