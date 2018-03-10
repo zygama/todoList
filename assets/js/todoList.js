@@ -7,7 +7,7 @@ var deleteItemButtons = $('.delete_item_button');
 // Will append the new todo to the list with a fade effect
 function appendTodo(p_todo) {
   let itemToAdd = $(`<li class="todo">
-                      <span class="delete_item_button">X</span>
+                      <span class="delete_item_button"><i class="fas fa-trash"></i></span>
                         ${p_todo}
                       </li>`
                     ).hide().fadeIn(1000); // Trick is to hide it and fadeIn it in the jQuery Object

@@ -1,5 +1,7 @@
 body {
-  background-color: purple;
+  background: #ee0979;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(90deg, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(90deg, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: 'Roboto', sans-serif;
 }
 
@@ -9,10 +11,26 @@ ul {
   margin: 0;
 }
 
+span {
+  background: #e74c3c;
+  margin-right: 20px;
+  color: white;
+  height: 40px;
+  width: 0;
+  display: inline-block; /* Fill the given proportion (40px*40px) with background of #e74c3c */
+  text-align: center; /* Center icon in the span */
+  transition: 0.2s linear; /* Slide from 0 to 40px width in 0.2s */
+  opacity: 0;
+}
+
+li:hover span {
+  width: 40px;
+  opacity: 1;
+}
+
 #container {
   margin: 100px auto; /* margin: top/bot left/right */
   width: 360px;
-  border: 1px solid black;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   background: #f7f7f7;
 }
@@ -34,6 +52,7 @@ ul {
   background: #f7f7f7;
   padding: 13px 13px 13px 20px;
   box-sizing: border-box; /* with this the 100% of width count padding and border, so input doesn't overflow container anymore */
+  border: 3px solid rgba(0, 0, 0, 0); /* Make disapear the gap inside the input */
 }
 
 #input_todo:focus {
@@ -42,11 +61,11 @@ ul {
   outline: none;
 }
 
-#input_todo.hide {
+.hide {
   display: none;
 }
 
-#add_todo_icon {
+.fa-plus {
   float: right;
 }
 
@@ -55,7 +74,6 @@ ul {
   height: 40px;
   line-height: 40px; /* In this whay the text will be centered horizontaly */
   color: #666;
-  /* padding-left: 10%; */
 }
 
 .todo:nth-child(odd) { /* to only affect odd of class todo inside ul */
@@ -65,8 +83,4 @@ ul {
 .did_todo {
   color: gray;
   text-decoration: line-through;
-}
-
-.delete_item_button {
-  display: none;
 }
